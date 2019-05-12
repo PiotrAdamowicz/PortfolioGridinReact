@@ -14,54 +14,78 @@ class App extends Component {
         id: "home",
         title: "Welcome My Ass",
         paragraph:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate",
-        isActive: true
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate"
       },
       resume: {
         id: "resume",
         title: "My work expirience",
-        paragraph: "Not much casue I suuuck",
-        isActive: false
+        paragraph: "Not much casue I suuuck"
       },
       projects: {
         id: "projects",
         title:
           "All of those count as work in progres that I'm proud enough to show",
-        paragraph: "Yeah Tic Tac Toe and this portfolio",
-        isActive: false
+        paragraph: "Yeah Tic Tac Toe and this portfolio"
       },
       contact: {
         id: "contact",
         title: "Write me Please",
-        paragraph: "Hmmm will see",
-        isActive: false
+        paragraph: "Hmmm will see"
       }
+    },
+    isActive: {
+      home: true,
+      resume: false,
+      projects: false,
+      contact: false
     }
   };
 
-  clickHandler(event) {
-    console.log(event.target.key);
-    const id = event.target.key;
-    this.setState({
-      card: {
-        home: {
-          isActive: id === "home" ? true : false
-        },
-        resume: {
-          isActive: id === "resume" ? true : false
-        },
-        projects: {
-          isActive: id === "projects" ? true : false
-        },
-        contact: {
-          isActive: id === "contact" ? true : false
-        }
-      }
-    });
+  clickHandler(id) {
+    console.log(id);
+    let isActive = {};
+    switch (id) {
+      case "home":
+        isActive = {
+          home: true,
+          resume: false,
+          projects: false,
+          contact: false
+        };
+        break;
+      case "resume":
+        isActive = {
+          home: false,
+          resume: true,
+          projects: false,
+          contact: false
+        };
+        break;
+      case "projects":
+        isActive = {
+          home: false,
+          resume: false,
+          projects: true,
+          contact: false
+        };
+        break;
+      case "contact":
+        isActive = {
+          home: false,
+          resume: false,
+          projects: false,
+          contact: true
+        };
+        break;
+      default:
+        break;
+    }
+    this.setState({ isActive });
   }
 
   render() {
     const { home, resume, projects, contact } = this.state.card;
+    const { isActive } = this.state;
     return (
       <div className="App">
         <header>
@@ -81,7 +105,7 @@ class App extends Component {
                 className="menuButton Home"
                 id={home.id}
                 key={home.id}
-                onClick={this.clickHandler.bind(this)}
+                onClick={this.clickHandler.bind(this, home.id)}
               >
                 Home
               </button>
@@ -95,7 +119,7 @@ class App extends Component {
               </button>
               <button
                 className="menuButton Projects"
-                onClick={this.clickHandler.bind(this)}
+                onClick={this.clickHandler.bind(this, projects.id)}
                 id={projects.id}
                 key={projects.id}
               >
@@ -105,7 +129,7 @@ class App extends Component {
                 className="menuButton Contact"
                 id={contact.id}
                 key={contact.id}
-                onClick={this.clickHandler.bind(this)}
+                onClick={this.clickHandler.bind(this, contact.id)}
               >
                 Contact
               </button>
@@ -113,7 +137,7 @@ class App extends Component {
           </div>
         </header>
         <main>
-          {home.isActive ? (
+          {isActive.home ? (
             <Card
               cardID={home.id}
               title={home.title}
@@ -122,16 +146,17 @@ class App extends Component {
           ) : (
             false
           )}
-          {resume.isActive ? (
+          {isActive.resume ? (
             <Card
               cardID={resume.id}
               title={resume.title}
               paragraph={resume.paragraph}
+              click={this.clickHandler}
             />
           ) : (
             false
           )}
-          {projects.isActive ? (
+          {isActive.projects ? (
             <Card
               cardID={projects.id}
               title={projects.title}
@@ -140,7 +165,7 @@ class App extends Component {
           ) : (
             false
           )}
-          {contact.isActive ? (
+          {isActive.contact ? (
             <Card
               cardID={contact.id}
               title={contact.title}
@@ -159,4 +184,3 @@ class App extends Component {
 }
 
 export default App;
-// TODO: NEXT: Cards component for Nav
