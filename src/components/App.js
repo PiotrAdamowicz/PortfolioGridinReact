@@ -3,34 +3,39 @@ import "../styles/App.css";
 import dragon from "../img/person1.jpg";
 
 import { faGithub, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faCloud, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "../components/Card";
+import Resume from "../components/Resume";
 
 class App extends Component {
   state = {
     card: {
       home: {
         id: "home",
-        title: "Welcome My Ass",
-        paragraph:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate"
+        title: "Hi my name is Peter...",
+        paragraphs: [
+          "I'm an aspiring front-end developer. Curently i'm working full time in unrelated industry. This portfolio is a story of me lerning the craft, trying to manage time and all the other activites. But... the bigest struggle is trying to sort myself",
+          `Gush that sounded serious... Well that's all true but if you didn't get discoureged by that and want to know more about me...`,
+          "I welcome you"
+        ]
       },
       resume: {
         id: "resume",
         title: "My work expirience",
-        paragraph: "Not much casue I suuuck"
+        paragraphs: ["Not much casue I suuuck"]
       },
       projects: {
         id: "projects",
         title:
           "All of those count as work in progres that I'm proud enough to show",
-        paragraph: "Yeah Tic Tac Toe and this portfolio"
+        paragraphs: ["Yeah Tic Tac Toe and this portfolio"]
       },
       contact: {
         id: "contact",
         title: "Write me Please",
-        paragraph: "Hmmm will see"
+        paragraphs: ["Hmmm will see"]
       }
     },
     isActive: {
@@ -42,7 +47,7 @@ class App extends Component {
   };
 
   clickHandler(id) {
-    console.log(id);
+    //TODO: Need to find a way to refactor this
     let isActive = {};
     switch (id) {
       case "home":
@@ -107,7 +112,10 @@ class App extends Component {
                 key={home.id}
                 onClick={this.clickHandler.bind(this, home.id)}
               >
-                Home
+                <div className="home_button_wrap">
+                  <FontAwesomeIcon icon={faHome} />
+                  <span>Home</span>
+                </div>
               </button>
               <button
                 className="menuButton Resume"
@@ -115,7 +123,7 @@ class App extends Component {
                 key={resume.id}
                 onClick={this.clickHandler.bind(this, resume.id)}
               >
-                Resume
+                <div className="resume_button_wrap">Resume</div>
               </button>
               <button
                 className="menuButton Projects"
@@ -123,7 +131,7 @@ class App extends Component {
                 id={projects.id}
                 key={projects.id}
               >
-                Projects
+                <div className="projects_button_wrap">Projects</div>
               </button>
               <button
                 className="menuButton Contact"
@@ -131,7 +139,7 @@ class App extends Component {
                 key={contact.id}
                 onClick={this.clickHandler.bind(this, contact.id)}
               >
-                Contact
+                <div className="contact_button_wrap">Contact</div>
               </button>
             </nav>
           </div>
@@ -141,18 +149,19 @@ class App extends Component {
             <Card
               cardID={home.id}
               title={home.title}
-              paragraph={home.paragraph}
+              paragraphs={home.paragraphs}
             />
           ) : (
             false
           )}
           {isActive.resume ? (
-            <Card
-              cardID={resume.id}
-              title={resume.title}
-              paragraph={resume.paragraph}
-              click={this.clickHandler}
-            />
+            // <Card
+            //   cardID={resume.id}
+            //   title={resume.title}
+            //   paragraphs={resume.paragraphs}
+            //   click={this.clickHandler}
+            // />
+            <Resume />
           ) : (
             false
           )}
@@ -160,7 +169,7 @@ class App extends Component {
             <Card
               cardID={projects.id}
               title={projects.title}
-              paragraph={projects.paragraph}
+              paragraphs={projects.paragraphs}
             />
           ) : (
             false
@@ -169,14 +178,16 @@ class App extends Component {
             <Card
               cardID={contact.id}
               title={contact.title}
-              paragraph={contact.paragraph}
+              paragraphs={contact.paragraphs}
             />
           ) : (
             false
           )}
         </main>
         <footer>
-          <p>Something</p>
+          <a href="#">
+            <FontAwesomeIcon icon={faCloud} /> Dwonload Resume
+          </a>
         </footer>
       </div>
     );

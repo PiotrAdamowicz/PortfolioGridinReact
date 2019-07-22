@@ -40,17 +40,76 @@
 .App .menuButton {
   flex-basis: 25%;
   border: none;
-  cursor: pointer;
+
+  color: white;
 }
+.App .menuButton:hover {
+  border: none;
+  cursor: pointer;
+  opacity: 1.2;
+}
+
 .App .Home {
-  background-color: red;
+  background-color: #3295ff;
 }
 .App .Resume {
-  background-color: blue;
+  background-color: #28a745;
 }
 .App .Projects {
-  background-color: green;
+  background-color: #ffcd38;
 }
 .App .Contact {
-  background-color: purple;
+  background-color: #e25d6a;
+}
+
+/* Wraps around buttons to make nice hovers */
+
+.projects_button_wrap {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.projects_button_wrap:hover {
+  background-color: black;
+  opacity: 0.5;
+}
+
+/* Cards */
+
+.card_home {
+  background-color: #3295ff;
+  width: 100%;
+  min-height: 30%;
+}
+
+.card_resume {
+  background-color: #28a745;
+  width: 100%;
+  min-height: 30%;
+}
+
+.card_projects {
+  background-color: #ffcd38;
+  width: 100%;
+  min-height: 30%;
+}
+
+.card_contact {
+  background-color: #e25d6a;
+  width: 100%;
+  min-height: 30%;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  min-height: 40%;
+}
+footer a {
+  color: white;
+  border: 2px solid white;
+  text-transform: none;
 }
