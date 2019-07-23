@@ -113,3 +113,7 @@ footer a {
   border: 2px solid white;
   text-transform: none;
 }
+
+.cv_container {
+  background-color: #28a745;
+}

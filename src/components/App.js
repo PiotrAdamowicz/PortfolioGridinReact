@@ -17,7 +17,7 @@ class App extends Component {
         title: "Hi my name is Peter...",
         paragraphs: [
           "I'm an aspiring front-end developer. Curently i'm working full time in unrelated industry. This portfolio is a story of me lerning the craft, trying to manage time and all the other activites. But... the bigest struggle is trying to sort myself",
-          `Gush that sounded serious... Well that's all true but if you didn't get discoureged by that and want to know more about me...`,
+          `Gosh that sound serious. If you want to know more about me...`,
           "I welcome you"
         ]
       },
