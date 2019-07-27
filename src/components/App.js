@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "../components/Card";
 import Resume from "../components/Resume";
+import Form from "../components/Form";
 
 class App extends Component {
   state = {
@@ -16,7 +17,7 @@ class App extends Component {
         id: "home",
         title: "Hi my name is Peter...",
         paragraphs: [
-          "I'm an aspiring front-end developer. Curently i'm working full time in unrelated industry. This portfolio is a story of me lerning the craft, trying to manage time and all the other activites. But... the bigest struggle is trying to sort myself",
+          "I'm an aspiring front-end developer. Currently I'm working full time in unrelated industry. This portfolio is a story of me learning the craft, trying to manage time and all the other activities. But... thebiggest struggle is trying to sort myself",
           `Gosh that sound serious. If you want to know more about me...`,
           "I welcome you"
         ]
@@ -31,14 +32,19 @@ class App extends Component {
       },
       projects: {
         id: "projects",
-        title:
-          "All of those count as work in progres that I'm proud enough to show",
-        paragraphs: ["Yeah Tic Tac Toe and this portfolio"]
+        title: "My learning experience",
+        paragraphs: [
+          "Below you can find selection of my works, mostly unfinished. Those works are in progress. The main goal here is to learn. The more I learn, more skills I have, the closer I get to finished projects."
+        ]
       },
       contact: {
         id: "contact",
-        title: "Write me Please",
-        paragraphs: ["Hmmm will see"]
+        title: "If you want to:",
+        paragraphs: [
+          "contact me with any questions, ",
+          "work offers, ",
+          "or just want to checkout my facebook, github go ahead."
+        ]
       }
     },
     isActive: {
@@ -181,11 +187,15 @@ class App extends Component {
             false
           )}
           {isActive.contact ? (
-            <Card
-              cardID={contact.id}
-              title={contact.title}
-              paragraphs={contact.paragraphs}
-            />
+            <>
+              <Card
+                cardID={contact.id}
+                title={contact.title}
+                paragraphs={contact.paragraphs}
+              />
+              {/* TODO: CONNECTING FORM LOGIC */}
+              <Form />
+            </>
           ) : (
             false
           )}
