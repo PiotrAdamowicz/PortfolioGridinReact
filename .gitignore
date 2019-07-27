@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # old styles
-/Resume.css
+/src/styles/Resume.css
