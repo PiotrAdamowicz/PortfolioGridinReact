@@ -20,7 +20,7 @@ class App extends Component {
           `Gosh that sound serious. If you want to know more about me...`,
           "I welcome you"
         ]
-        // TODO: Maybe Jonny Cash and animation after Welcome
+        // TODO: Maybe Jonny Cash and animation after Welcome!
       },
       resume: {
         id: "resume",
