@@ -3,7 +3,7 @@ import "../styles/App.css";
 import dragon from "../img/person1.jpg";
 
 import { faGithub, faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faCloud, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "../components/Card";
@@ -20,11 +20,14 @@ class App extends Component {
           `Gosh that sound serious. If you want to know more about me...`,
           "I welcome you"
         ]
+        // TODO: Maybe Jonny Cash and animation after Welcome
       },
       resume: {
         id: "resume",
         title: "My work expirience",
-        paragraphs: ["Not much casue I suuuck"]
+        paragraphs: [
+          "At present I work full time at MSWiA Hospital in Białystok as paramedic. Because it’s unrelated to IT industry I’ve tried to add other activities that may interest potential employers."
+        ]
       },
       projects: {
         id: "projects",
@@ -39,8 +42,8 @@ class App extends Component {
       }
     },
     isActive: {
-      home: true,
-      resume: false,
+      home: false,
+      resume: true,
       projects: false,
       contact: false
     }
@@ -106,6 +109,7 @@ class App extends Component {
             </div>
             <h2 className="position">Junior Front-End Developer</h2>
             <nav className="menu">
+              {/* TODO: CONSIDER REFACTORING TO SINGLE NAV COMPONENT */}
               <button
                 className="menuButton Home"
                 id={home.id}
@@ -155,13 +159,15 @@ class App extends Component {
             false
           )}
           {isActive.resume ? (
-            // <Card
-            //   cardID={resume.id}
-            //   title={resume.title}
-            //   paragraphs={resume.paragraphs}
-            //   click={this.clickHandler}
-            // />
-            <Resume />
+            <>
+              <Card
+                cardID={resume.id}
+                title={resume.title}
+                paragraphs={resume.paragraphs}
+                click={this.clickHandler}
+              />
+              <Resume />
+            </>
           ) : (
             false
           )}
@@ -184,11 +190,11 @@ class App extends Component {
             false
           )}
         </main>
-        <footer>
+        {/* <footer>
           <a href="#">
             <FontAwesomeIcon icon={faCloud} /> Dwonload Resume
           </a>
-        </footer>
+        </footer> */}
       </div>
     );
   }

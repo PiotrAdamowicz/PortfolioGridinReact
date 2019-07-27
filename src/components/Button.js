@@ -8,7 +8,7 @@ const Button = props => {
   console.log(props.data.icon);
 
   return (
-    <button className={`menuButton ${id}`} id={id} key={id} onClick={click}>
+    <button classNameName={`menuButton ${id}`} id={id} key={id} onClick={click}>
       <FontAwesomeIcon icon={props.data.icon} />
       <span>Home</span>
     </button>

@@ -1,111 +1,3 @@
-.lst-kix_d52h1clnbs3c-5 > li:before {
-  content: "\0025a0  ";
-}
-.lst-kix_d52h1clnbs3c-3 > li:before {
-  content: "\0025cf  ";
-}
-.lst-kix_d52h1clnbs3c-2 > li:before {
-  content: "\0025a0  ";
-}
-.lst-kix_d52h1clnbs3c-6 > li:before {
-  content: "\0025cf  ";
-}
-.lst-kix_d52h1clnbs3c-1 > li:before {
-  content: "\0025cb  ";
-}
-.lst-kix_d52h1clnbs3c-7 > li:before {
-  content: "\0025cb  ";
-}
-.lst-kix_d52h1clnbs3c-0 > li:before {
-  content: "\00200b  ";
-}
-.lst-kix_d52h1clnbs3c-8 > li:before {
-  content: "\0025a0  ";
-}
-.lst-kix_3expns8knkd9-0 > li:before {
-  content: "\00200b  ";
-}
-.lst-kix_3expns8knkd9-1 > li:before {
-  content: "\0025cb  ";
-}
-ul.lst-kix_d52h1clnbs3c-5 {
-  list-style-type: none;
-}
-ul.lst-kix_d52h1clnbs3c-6 {
-  list-style-type: none;
-}
-.lst-kix_3expns8knkd9-3 > li:before {
-  content: "\0025cf  ";
-}
-ul.lst-kix_d52h1clnbs3c-7 {
-  list-style-type: none;
-}
-ul.lst-kix_d52h1clnbs3c-8 {
-  list-style-type: none;
-}
-.lst-kix_3expns8knkd9-2 > li:before {
-  content: "\0025a0  ";
-}
-.lst-kix_d52h1clnbs3c-4 > li:before {
-  content: "\0025cb  ";
-}
-.lst-kix_3expns8knkd9-8 > li:before {
-  content: "\0025a0  ";
-}
-.lst-kix_3expns8knkd9-7 > li:before {
-  content: "\0025cb  ";
-}
-ul.lst-kix_d52h1clnbs3c-0 {
-  list-style-type: none;
-}
-ul.lst-kix_d52h1clnbs3c-1 {
-  list-style-type: none;
-}
-ul.lst-kix_d52h1clnbs3c-2 {
-  list-style-type: none;
-}
-ul.lst-kix_d52h1clnbs3c-3 {
-  list-style-type: none;
-}
-ul.lst-kix_d52h1clnbs3c-4 {
-  list-style-type: none;
-}
-.lst-kix_3expns8knkd9-4 > li:before {
-  content: "\0025cb  ";
-}
-.lst-kix_3expns8knkd9-5 > li:before {
-  content: "\0025a0  ";
-}
-.lst-kix_3expns8knkd9-6 > li:before {
-  content: "\0025cf  ";
-}
-ul.lst-kix_3expns8knkd9-2 {
-  list-style-type: none;
-}
-ul.lst-kix_3expns8knkd9-1 {
-  list-style-type: none;
-}
-ul.lst-kix_3expns8knkd9-4 {
-  list-style-type: none;
-}
-ul.lst-kix_3expns8knkd9-3 {
-  list-style-type: none;
-}
-ul.lst-kix_3expns8knkd9-0 {
-  list-style-type: none;
-}
-ul.lst-kix_3expns8knkd9-6 {
-  list-style-type: none;
-}
-ul.lst-kix_3expns8knkd9-5 {
-  list-style-type: none;
-}
-ul.lst-kix_3expns8knkd9-8 {
-  list-style-type: none;
-}
-ul.lst-kix_3expns8knkd9-7 {
-  list-style-type: none;
-}
 ol {
   margin: 0;
   padding: 0;
@@ -185,7 +77,7 @@ table th {
   margin-right: 15pt;
 }
 .c11 {
-  color: #666666;
+  color: black;
   font-weight: 700;
   text-decoration: none;
   vertical-align: baseline;
@@ -230,7 +122,7 @@ table th {
   font-style: normal;
 }
 .c8 {
-  color: #666666;
+  color: black;
   text-decoration: none;
   vertical-align: baseline;
   font-size: 8pt;
@@ -246,7 +138,7 @@ table th {
   margin-right: 15pt;
 }
 .c31 {
-  color: #666666;
+  color: black;
   text-decoration: none;
   vertical-align: baseline;
   font-size: 10pt;
@@ -278,7 +170,7 @@ table th {
   font-style: normal;
 }
 .c9 {
-  color: #666666;
+  color: black;
   text-decoration: none;
   vertical-align: baseline;
   font-size: 9pt;
@@ -286,7 +178,7 @@ table th {
   font-style: normal;
 }
 .c15 {
-  color: #666666;
+  color: black;
   text-decoration: none;
   vertical-align: baseline;
   font-size: 6pt;
@@ -361,10 +253,9 @@ table th {
   margin-right: auto;
 }
 .c18 {
-  background-color: #ffffff;
-  /* max-width: 525.6pt;
-  padding: 28.8pt 43.2pt 43.2pt 43.2pt; */
-  /* TODO: work out padding to center the CV */
+  background-color: #fff;
+
+  padding: 8% 20%;
 }
 .c5 {
   background-color: #eeeeee;
@@ -420,13 +311,13 @@ table th {
   text-align: left;
 }
 li {
-  color: #666666;
+  color: black;
   font-size: 9pt;
   font-family: "Merriweather";
 }
 p {
   margin: 0;
-  color: #666666;
+  color: black;
   font-size: 9pt;
   font-family: "Merriweather";
 }
@@ -453,7 +344,7 @@ h2 {
 }
 h3 {
   padding-top: 5pt;
-  color: #666666;
+  color: black;
   font-size: 8pt;
   padding-bottom: 5pt;
   font-family: "Open Sans";
@@ -464,7 +355,7 @@ h3 {
 h4 {
   padding-top: 8pt;
   -webkit-text-decoration-skip: none;
-  color: #666666;
+  color: black;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   font-size: 11pt;
@@ -476,7 +367,7 @@ h4 {
 }
 h5 {
   padding-top: 8pt;
-  color: #666666;
+  color: black;
   font-size: 11pt;
   padding-bottom: 0pt;
   font-family: "Trebuchet MS";
@@ -486,7 +377,7 @@ h5 {
 }
 h6 {
   padding-top: 8pt;
-  color: #666666;
+  color: black;
   font-size: 11pt;
   padding-bottom: 0pt;
   font-family: "Trebuchet MS";

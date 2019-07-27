@@ -1,9 +1,403 @@
 import React from "react";
-import "../styles/Resume.css";
+import styled from "styled-components";
+
+// import "../styles/Resume.css";
+
+//styles from goodle documents
+const ResumeStyle = styled.section`
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+  table td,
+  table th {
+    padding: 0;
+  }
+  .c16 {
+    border-right-style: solid;
+    padding: 7.2pt 7.2pt 7.2pt 7.2pt;
+    border-bottom-color: #ffffff;
+    border-top-width: 0pt;
+    border-right-width: 0pt;
+    border-left-color: #ffffff;
+    vertical-align: top;
+    border-right-color: #ffffff;
+    border-left-width: 0pt;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-bottom-width: 0pt;
+    width: 358.5pt;
+    border-top-color: #ffffff;
+    border-bottom-style: solid;
+  }
+  .c25 {
+    border-right-style: solid;
+    padding: 7.2pt 7.2pt 7.2pt 7.2pt;
+    border-bottom-color: #ffffff;
+    border-top-width: 0pt;
+    border-right-width: 0pt;
+    border-left-color: #ffffff;
+    vertical-align: top;
+    border-right-color: #ffffff;
+    border-left-width: 0pt;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-bottom-width: 0pt;
+    width: 165pt;
+    border-top-color: #ffffff;
+    border-bottom-style: solid;
+  }
+  .c32 {
+    border-right-style: solid;
+    border-bottom-color: #ffffff;
+    border-top-width: 0pt;
+    border-right-width: 0pt;
+    border-left-color: #ffffff;
+    vertical-align: top;
+    border-right-color: #ffffff;
+    border-left-width: 0pt;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-bottom-width: 0pt;
+    width: 358.5pt;
+    border-top-color: #ffffff;
+    border-bottom-style: solid;
+  }
+  .c12 {
+    margin-left: 0pt;
+    padding-top: 6pt;
+    list-style-position: inside;
+    text-indent: 45pt;
+    padding-bottom: 0pt;
+    line-height: 1.3;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c22 {
+    margin-left: 0pt;
+    padding-top: 16pt;
+    list-style-position: inside;
+    text-indent: 45pt;
+    padding-bottom: 0pt;
+    line-height: 1.3;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c11 {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 10pt;
+    font-family: "Merriweather";
+    font-style: normal;
+  }
+  .c10 {
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 9pt;
+    font-family: "Open Sans";
+    font-style: normal;
+  }
+  .c1 {
+    color: #2079c7;
+    font-weight: 700;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 9pt;
+    font-family: "Open Sans";
+    font-style: normal;
+  }
+  .c4 {
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 12pt;
+    font-family: "Merriweather";
+    font-style: italic;
+  }
+  .c0 {
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 9pt;
+    font-family: "Open Sans";
+    font-style: normal;
+  }
+  .c8 {
+    color: black;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 8pt;
+    font-family: "Open Sans";
+    font-style: normal;
+  }
+  .c13 {
+    padding-top: 16pt;
+    padding-bottom: 0pt;
+    line-height: 1;
+    page-break-after: avoid;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c31 {
+    color: black;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 10pt;
+    font-family: "Merriweather";
+    font-style: normal;
+  }
+  .c26 {
+    color: #000000;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 32pt;
+    font-family: "Merriweather";
+    font-style: normal;
+  }
+  .c28 {
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    line-height: 1;
+    page-break-after: avoid;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c37 {
+    color: #b7b7b7;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 9pt;
+    font-family: "Open Sans";
+    font-style: normal;
+  }
+  .c9 {
+    color: black;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 9pt;
+    font-family: "Merriweather";
+    font-style: normal;
+  }
+  .c15 {
+    color: black;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 6pt;
+    font-family: "Merriweather";
+    font-style: normal;
+  }
+  .c27 {
+    -webkit-text-decoration-skip: none;
+    color: #1155cc;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    font-size: 10pt;
+  }
+  .c3 {
+    padding-top: 30pt;
+    padding-bottom: 0pt;
+    line-height: 1;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c7 {
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    line-height: 1.15;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c24 {
+    padding-top: 6pt;
+    padding-bottom: 0pt;
+    line-height: 1.3;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c21 {
+    padding-top: 0pt;
+    padding-bottom: 6pt;
+    line-height: 1;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c30 {
+    color: #000000;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-size: 11pt;
+    font-family: "Merriweather";
+  }
+  .c35 {
+    padding-top: 6pt;
+    padding-bottom: 0pt;
+    line-height: 1;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c36 {
+    padding-top: 16pt;
+    padding-bottom: 0pt;
+    line-height: 1.3;
+    text-align: left;
+    margin-right: 15pt;
+  }
+  .c38 {
+    text-decoration-skip-ink: none;
+    -webkit-text-decoration-skip: none;
+    color: #1155cc;
+    text-decoration: underline;
+  }
+  .c14 {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-right: auto;
+  }
+  .c18 {
+    background-color: #fff;
+
+    padding: 8% 20%;
+  }
+  .c5 {
+    background-color: #eeeeee;
+    font-family: "Roboto";
+    font-weight: 400;
+  }
+  .c17 {
+    padding: 0;
+    margin: 0;
+  }
+  .c33 {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .c19 {
+    background-color: #ffffff;
+  }
+  .c20 {
+    height: 9pt;
+  }
+  .c6 {
+    font-weight: 400;
+  }
+  .c29 {
+    font-style: italic;
+  }
+  .c34 {
+    height: 588pt;
+  }
+  .c2 {
+    height: 7pt;
+  }
+  .c23 {
+    font-weight: 700;
+  }
+  .title {
+    padding-top: 0pt;
+    color: #000000;
+    font-weight: 700;
+    font-size: 36pt;
+    padding-bottom: 6pt;
+    font-family: "Merriweather";
+    line-height: 1;
+    text-align: left;
+  }
+  .subtitle {
+    padding-top: 0pt;
+    color: #000000;
+    font-size: 9pt;
+    padding-bottom: 0pt;
+    font-family: "Open Sans";
+    line-height: 1.15;
+    text-align: left;
+  }
+  li {
+    color: black;
+    font-size: 9pt;
+    font-family: "Merriweather";
+  }
+  p {
+    margin: 0;
+    color: black;
+    font-size: 9pt;
+    font-family: "Merriweather";
+  }
+  h1 {
+    padding-top: 30pt;
+    color: #2079c7;
+    font-weight: 700;
+    font-size: 9pt;
+    padding-bottom: 0pt;
+    font-family: "Open Sans";
+    line-height: 1;
+    text-align: left;
+  }
+  h2 {
+    padding-top: 16pt;
+    color: #000000;
+    font-weight: 700;
+    font-size: 11pt;
+    padding-bottom: 0pt;
+    font-family: "Merriweather";
+    line-height: 1;
+    page-break-after: avoid;
+    text-align: left;
+  }
+  h3 {
+    padding-top: 5pt;
+    color: black;
+    font-size: 8pt;
+    padding-bottom: 5pt;
+    font-family: "Open Sans";
+    line-height: 1;
+    page-break-after: avoid;
+    text-align: left;
+  }
+  h4 {
+    padding-top: 8pt;
+    -webkit-text-decoration-skip: none;
+    color: black;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    font-size: 11pt;
+    padding-bottom: 0pt;
+    font-family: "Trebuchet MS";
+    line-height: 1.3;
+    page-break-after: avoid;
+    text-align: left;
+  }
+  h5 {
+    padding-top: 8pt;
+    color: black;
+    font-size: 11pt;
+    padding-bottom: 0pt;
+    font-family: "Trebuchet MS";
+    line-height: 1.3;
+    page-break-after: avoid;
+    text-align: left;
+  }
+  h6 {
+    padding-top: 8pt;
+    color: black;
+    font-size: 11pt;
+    padding-bottom: 0pt;
+    font-family: "Trebuchet MS";
+    line-height: 1.3;
+    page-break-after: avoid;
+    font-style: italic;
+    text-align: left;
+  }
+`;
 
 const Resume = props => {
   return (
-    <section class="c18">
+    <ResumeStyle class="c18">
       <p class="c20 c35">
         <span class="c6 c15" />
       </p>
@@ -238,7 +632,7 @@ const Resume = props => {
       <p class="c24 c20">
         <span class="c15 c6" />
       </p>
-    </section>
+    </ResumeStyle>
   );
 };
 
