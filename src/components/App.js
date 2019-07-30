@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "../components/Card";
 import Resume from "../components/Resume";
 import Form from "../components/Form";
+import Projects from "../components/Projects";
 
 class App extends Component {
   state = {
@@ -49,8 +50,8 @@ class App extends Component {
     },
     isActive: {
       home: false,
-      resume: true,
-      projects: false,
+      resume: false,
+      projects: true,
       contact: false
     }
   };
@@ -178,11 +179,14 @@ class App extends Component {
             false
           )}
           {isActive.projects ? (
-            <Card
-              cardID={projects.id}
-              title={projects.title}
-              paragraphs={projects.paragraphs}
-            />
+            <>
+              <Card
+                cardID={projects.id}
+                title={projects.title}
+                paragraphs={projects.paragraphs}
+              />
+              <Projects />
+            </>
           ) : (
             false
           )}
