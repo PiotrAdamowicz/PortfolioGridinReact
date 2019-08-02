@@ -10,6 +10,7 @@ import Card from "../components/Card";
 import Resume from "../components/Resume";
 import Form from "../components/Form";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 class App extends Component {
   state = {
@@ -18,9 +19,9 @@ class App extends Component {
         id: "home",
         title: "Hi my name is Peter...",
         paragraphs: [
-          "I'm an aspiring front-end developer. Currently I'm working full time in unrelated industry. This portfolio is a story of me learning the craft, trying to manage time and all the other activities. But... thebiggest struggle is trying to sort myself",
+          "I'm an aspiring front-end developer. Currently I'm working full time in unrelated industry. This portfolio is a story of me learning the craft, trying to manage time and all the other activities. But... the biggest struggle is trying to sort myself.",
           `Gosh that sound serious. If you want to know more about me...`,
-          "I welcome you"
+          "I welcome you..."
         ]
         // TODO: Maybe Jonny Cash and animation after Welcome!
       },
@@ -49,9 +50,9 @@ class App extends Component {
       }
     },
     isActive: {
-      home: false,
+      home: true,
       resume: false,
-      projects: true,
+      projects: false,
       contact: false
     }
   };
@@ -204,11 +205,7 @@ class App extends Component {
             false
           )}
         </main>
-        {/* <footer>
-          <a href="#">
-            <FontAwesomeIcon icon={faCloud} /> Dwonload Resume
-          </a>
-        </footer> */}
+        {/* <Footer /> */}
       </div>
     );
   }

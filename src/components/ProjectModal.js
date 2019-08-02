@@ -7,7 +7,13 @@ class ProjectModal extends Component {
   };
   render() {
     return (
-      <div>
+      <div
+        onClick={() => {
+          this.setState(prevState => ({
+            showDetails: !prevState.showDetails
+          }));
+        }}
+      >
         {this.state.showDetails ? (
           <>
             <h3>Project Name</h3>
@@ -17,15 +23,7 @@ class ProjectModal extends Component {
         ) : (
           false
         )}
-        <img
-          onClick={() => {
-            this.setState(prevState => ({
-              showDetails: !prevState.showDetails
-            }));
-          }}
-          src={dragon}
-          alt="argh responsivenes"
-        />
+        <img src={dragon} alt="argh responsivenes" />
       </div>
     );
   }
