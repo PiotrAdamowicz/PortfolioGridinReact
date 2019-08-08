@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import "../styles/App.css";
-import dragon from "../img/person1.jpg";
-
-import { faGithub, faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "../components/Card";
 import Resume from "../components/Resume";
 import Form from "../components/Form";
 import Projects from "../components/Projects";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 class App extends Component {
@@ -104,58 +100,7 @@ class App extends Component {
     const { isActive } = this.state;
     return (
       <div className="App">
-        <header>
-          <div className="photo col1">
-            <img src={dragon} alt="dragon" />
-          </div>
-          <div className="col2">
-            <div className="name socialMedia">
-              <h1>Piotr Adamowicz</h1>
-
-              <FontAwesomeIcon icon={faGithub} />
-              <FontAwesomeIcon icon={faFacebook} />
-            </div>
-            <h2 className="position">Junior Front-End Developer</h2>
-            <nav className="menu">
-              {/* TODO: CONSIDER REFACTORING TO SINGLE NAV COMPONENT */}
-              <button
-                className="menuButton Home"
-                id={home.id}
-                key={home.id}
-                onClick={this.clickHandler.bind(this, home.id)}
-              >
-                <div className="home_button_wrap">
-                  <FontAwesomeIcon icon={faHome} />
-                  <span>Home</span>
-                </div>
-              </button>
-              <button
-                className="menuButton Resume"
-                id={resume.id}
-                key={resume.id}
-                onClick={this.clickHandler.bind(this, resume.id)}
-              >
-                <div className="resume_button_wrap">Resume</div>
-              </button>
-              <button
-                className="menuButton Projects"
-                onClick={this.clickHandler.bind(this, projects.id)}
-                id={projects.id}
-                key={projects.id}
-              >
-                <div className="projects_button_wrap">Projects</div>
-              </button>
-              <button
-                className="menuButton Contact"
-                id={contact.id}
-                key={contact.id}
-                onClick={this.clickHandler.bind(this, contact.id)}
-              >
-                <div className="contact_button_wrap">Contact</div>
-              </button>
-            </nav>
-          </div>
-        </header>
+        <Header />
         <main>
           {isActive.home ? (
             <Card
